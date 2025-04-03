@@ -1,12 +1,29 @@
-{% extends 'base.html.twig' %}
+{% extends 'landing.html.twig' %}
 
 {% block title %}Welcome to Abysstore!{% endblock %}
 
 {% block body %}
-<div>
-    <h1 class="text-5xl text-center mt-2">Abysstore</h1>
-    <p class="text-center mt-6">
-        Welcome into the Abysstore, the best place to find what you need!
-    </p>
-</div>
+    <article>
+        <section class="landing-page min-h-screen flex text-white">
+            <div class="h-screen flex-1 flex flex-col justify-center items-center">
+                <h1 class="text-8xl text-center">Welcome to the Abysstore</h1>
+            </div>
+            <div class="flex-1 flex flex-col justify-center">
+                <p>Buy what you want! Order from wherever you want!</p>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-4xl">About Us</h2>
+
+            {% macro message_formatter(message) %}
+                <strong>{{ message }}</strong>
+            {% endmacro %}
+            <twig:Alert message="This is really cool!" withCloseButton>
+                AH AH AH !
+                {% from '/homepage/index.html.twig' import message_formatter %}
+                {{ message_formatter('This is really cool!') }}
+            </twig:Alert>
+        </section>
+    </article>
 {% endblock %}

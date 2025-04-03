@@ -4,14 +4,6 @@
 
 @layer base {
   @font-face {
-    font-family: 'cinzel';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../fonts/cinzel.ttf);
-  }
-
-  @font-face {
     font-family: 'varela';
     font-style: normal;
     font-weight: 400;

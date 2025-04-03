@@ -3,6 +3,9 @@ body {
 }
 
 h1 {
-  font-family: 'cinzel', sans-serif;
   font-weight: bold;
+}
+
+.landing-page {
+  background-image: linear-gradient(to right bottom, #051937, #0c2646, #133456, #1b4266, #225176);
 }
