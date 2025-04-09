@@ -4,19 +4,21 @@
 
 {% block body %}
     <article>
-        <section class="landing-page flex flex-col h-[300px] text-white">
-            <div class="flex-1 flex flex-col justify-center items-center">
-                <h1 class="text-2xl center">Welcome to the Abysstore</h1>
+        <section class="landing-page flex flex-col h-[300px] lg:min-h-screen text-white lg:flex-row lg:items-center">
+            <div class="flex-1 flex flex-col justify-center items-center lg:justify-start lg:h-[500px]">
+                <h1 class="text-2xl center md:text-4xl lg:text-6xl lg:ml-8 lg:text-center xl:text-8xl">
+                    Welcome to the Abysstore
+                </h1>
             </div>
-            <div class="flex-1 flex flex-col justify-center items-center mx-4">
-                <p class="mb-4 text-center">Buy what you want! Order from wherever you want!</p>
+            <div class="flex-1 flex flex-col justify-center items-center mx-4 xl:justify-end xl:h-[300px]">
+                <p class="mb-4 text-center lg:text-2xl xl:text-3xl">Buy what you want! Order from wherever you want!</p>
                 <twig:Link url="javascript:void(0)" icon="ph:magnifying-glass" label="Explore" type="light" />
             </div>
         </section>
 
         <section class="mt-4 container mb-4">
             <h2 class="text-2xl my-4 text-center">Newest items!</h2>
-            <div class="flex flex-col gap-4">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {% for item in items %}
                     <twig:ItemCard
                         name="{{ item.name }}"
