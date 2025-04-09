@@ -1,0 +1,12 @@
+<div{{ attributes }} class="border-2 border-blue-900 rounded-lg p-4 bg-white shadow-lg">
+    <header class="mb-4">
+        <h2 class="text-lg font-bold">{{ name }}</h2>
+    </header>
+    <div>
+        <p class="text-ellipsis overflow-hidden text-nowrap">{{ description }}</p>
+    </div>
+    <footer class="flex justify-between items-center mt-4">
+        <p>{{ priceExcludingTaxes }}</p>
+        <twig:Link url="javascript:void(0)" label="View details" />
+    </footer>
+</div>

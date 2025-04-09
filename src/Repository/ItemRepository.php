@@ -16,6 +16,15 @@ class ItemRepository extends ServiceEntityRepository
         parent::__construct($registry, Item::class);
     }
 
+    public function findNewestItems(): array {
+        return $this->createQueryBuilder('i')
+            ->orderBy('i.createdAt', 'DESC')
+            ->orderBy('i.name', 'ASC')
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult();
+    }
+
     //    /**
     //     * @return Item[] Returns an array of Item objects
     //     */

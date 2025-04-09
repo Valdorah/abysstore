@@ -7,5 +7,25 @@ h1 {
 }
 
 .landing-page {
-  background-image: linear-gradient(to right bottom, #051937, #0c2646, #133456, #1b4266, #225176);
+  background-image: linear-gradient(to right bottom, #1e3a8a, #113e85, #0c427e, #104477, #1a466f);
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply px-3 py-2 rounded-md;
+}
+
+.btn-sm {
+  @apply btn text-xs;
+}
+
+.btn-primary {
+  @apply bg-blue-900 text-white;
+}
+
+.btn-light {
+  @apply bg-white text-blue-900 border-2 border-blue-900;
 }
