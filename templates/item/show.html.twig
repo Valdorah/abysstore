@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Abysstore{% endblock %}
+
+{% block body %}
+    <article class="container">
+        <h1 class="text-2xl my-8 lg:text-4xl">{{ item.name | capitalize }}</h1>
+
+        <div>
+            <p>Price (without taxes): {{ item.priceExcludingTaxes | format_currency('USD') }}</p>
+            <p>{{ item.quantity }} in stock.</p>
+            <p>Description: {{ item.description }}</p>
+        </div>
+    </article>
+{% endblock %}
